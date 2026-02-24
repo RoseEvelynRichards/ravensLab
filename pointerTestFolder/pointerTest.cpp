@@ -52,5 +52,10 @@ int main(){
     cout << endl;
     delete[] testNumD;
 
-
+    int val = 10000000;
+    int* testNumE = new int[val];
+    for (int i = 0; i <= val; i++){
+        testNumE[i] = i;
+        cout << testNumE[i] << " ";
+    }
 }
