@@ -1,0 +1,4 @@
+1. Why does deleting a middle node in a doubly linked list require updating pointers in two
+directions?
+- The previous and next node both point to the deleted value so if they are not updated then 
+they will be lefted pointing at a delete value.
