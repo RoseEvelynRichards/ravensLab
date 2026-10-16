@@ -86,6 +86,7 @@ int main() {
 
     insertEnd(head, 10);
     insertEnd(head, 20);
+    insertEnd(head, 90);
     insertEnd(head, 30);
     insertEnd(head, 40);
 

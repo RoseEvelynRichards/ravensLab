@@ -1,0 +1,11 @@
+
+
+monty_hall - A function that simulates the Monty hall problem, ask the user if they want to stay or switch. 
+When you run the function it should generate a random permeation of values behind the doors (car, goat, and goat) 
+and should simulate the problem: The user selects a random door, the host selects a door with a goat that is not 
+the door the user selected. The function should return a bool value based on the result: True if you found the car
+ and False otherwise.
+
+simulate(num_iterations) - A method that simulates num_iterations of the monty hall problem. Your method should 
+collect statistics regarding how many times the user won and lost. It should print those statistics, and the ratio 
+times_won/total_runs (the actual percentage as calculated by the program, not a rounded value).
