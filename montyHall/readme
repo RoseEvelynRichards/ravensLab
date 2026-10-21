@@ -1,11 +1,9 @@
+# ReadMe
 
-
-monty_hall - A function that simulates the Monty hall problem, ask the user if they want to stay or switch. 
-When you run the function it should generate a random permeation of values behind the doors (car, goat, and goat) 
-and should simulate the problem: The user selects a random door, the host selects a door with a goat that is not 
-the door the user selected. The function should return a bool value based on the result: True if you found the car
- and False otherwise.
-
-simulate(num_iterations) - A method that simulates num_iterations of the monty hall problem. Your method should 
-collect statistics regarding how many times the user won and lost. It should print those statistics, and the ratio 
-times_won/total_runs (the actual percentage as calculated by the program, not a rounded value).
+The programmed is coded in and needs to be ran in a C++ environment.
+If g++ is installed run the following to compile:
+    g++ montyHall.cpp - o monty
+Once compiled run the following to run the program:
+    ./monty
+The simulate option always chooses to switch. I intend to change that for user to decided but it is how it is.
+I didn't quite understand how to exactly switching answers gave you a better chance and to be honest I still don't really. Was surprised to see how much of an advantage it gives the person.
