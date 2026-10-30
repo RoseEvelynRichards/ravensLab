@@ -34,13 +34,9 @@ Node* buildTree(std::vector<int> preorder){
 void preorderTraversal(Node* root) {
     if (root == nullptr) return;
 
+    std::cout << root->data << " "; 
     preorderTraversal(root->left);
-    if (root == nullptr)return;
-    std::cout << root->data << " ";
-    
-    preorderTraversal(root->right);
-    if (root == nullptr) return; 
-    
+    preorderTraversal(root->right);   
 }
 
 
@@ -54,7 +50,10 @@ void inorderTraversal(Node* root) {
 
 // Postorder: Left -> Right -> Root
 void postorderTraversal(Node* root) {
-    // TODO: postorder
+    if (root == nullptr) return;
+    postorderTraversal(root->left);
+    postorderTraversal(root->right);
+    std::cout << root->data << " ";
 }
 
 int main(){

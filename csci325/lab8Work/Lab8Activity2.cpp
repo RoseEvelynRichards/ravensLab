@@ -1,6 +1,5 @@
 #include <iostream>
 #include <vector>
-using namespace std;
 
 class Node{
 public:
@@ -18,13 +17,13 @@ public:
 // insert new value .
 Node* insert(Node* root, int value) {
     if (root == nullptr) {
-        // Todo: create and return a new node with value.
+        return new Node(value);
     }
 
     if (value < root->data) {
-        // TODO: insert into the left subtree
+        root->left = insert(root->left, value);
     } else {
-        // TODO: Insert into the right subtree
+       root->right = insert(root->right, value);
     }
 
     return root;
@@ -36,8 +35,9 @@ Node* search(Node* root, int key) {
         return root;
 
     if (key < root->data) {
-        // TODO: Search the left subtree.
+        return search(root->left, key);
     } else {
+        return search(root->right, key);
         // TODO: Search the right subtree
     }
 }
@@ -47,26 +47,30 @@ void inorderTraversal(Node* root) {
     if (root == nullptr)
         return;
 
+    inorderTraversal(root->left);
+    std::cout << root->data << ' ';
+    inorderTraversal(root ->right);
+
 // Inorder: Left -> Root -> Right
 }
 
 int main(){
-    vector<int> values = {50, 30, 70, 20, 40, 60, 80, 65};
+    std::vector<int> values = {50, 30, 70, 20, 40, 60, 80, 65};
     Node* root = nullptr;
     //insertion
     for (int value : values)
         root = insert(root, value);
    
         //traversal
-    cout << "BST In-Order Traversal: " << endl;
+    std::cout << "BST In-Order Traversal: " << std::endl;
     inorderTraversal(root);
-    cout << endl;
+    std::cout << std::endl;
     //search
     int targets[] = {40, 55};
     for (int target : targets) {
         Node* result = search(root, target);
-        cout << "Search for " << target << ": ";
-        cout << (result != nullptr ? "Found" : "Not found") << endl;
+        std::cout << "Search for " << target << ": ";
+        std::cout << (result != nullptr ? "Found" : "Not found") << std::endl;
     }
 
     return 0;
