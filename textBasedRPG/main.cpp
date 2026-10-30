@@ -8,16 +8,10 @@
  * @copyright Copyright (c) 2026
  * 
  */
-
 #include <iostream>
 #include "player.h"
 #include "enemy.h"
 
-/**
- * @brief its the main function man idk
- * 
- * @return int should return 0 if not I guess I've been hacked
- */
 int main(){
     system("clear");
     
