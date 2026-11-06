@@ -58,7 +58,7 @@ int main() {
     while(front != nullptr){
         std::string curr = front->data;
         std::cout << "Now serving: " << curr << std::endl;
-        this_thread::sleep_for(chrono::seconds(1));
+        this_thread::sleep_for(chrono::seconds(5));
         std::cout << "Service completed: " << dequeue(front,rear) 
         << " (" << faketime << " seconds)" <<std::endl; 
         faketime = faketime + 5;
