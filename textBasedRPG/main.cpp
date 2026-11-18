@@ -21,10 +21,12 @@ int main(){
     while(dummy.isAlive() == true && user.isAlive() == true){
         user.turn(dummy);
         dummy.attack(user);
-        std::cout << std::endl << "Your HP: " << user.getHP() << " = Their HP: " << dummy.getHP() << std::endl << std::endl;
+        std::cout << std::endl << "Your HP: " << user.getHP() << " = Their HP: " 
+        << dummy.getHP() << std::endl << std::endl;
     }
 
-    if (dummy.isAlive() == false && user.isAlive() == false) std::cout << "You have both been defeated...";
+    if (dummy.isAlive() == false && user.isAlive() == false) std::cout 
+    << "You have both been defeated...";
     else if (dummy.isAlive()) std::cout << "You have been defeated...";
     else std::cout << dummy.getName() << " is defeated!";
     
